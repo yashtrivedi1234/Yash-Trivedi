@@ -40,9 +40,14 @@ export const Footer = () => {
             <a href="#" className="text-3xl font-display font-black tracking-tighter group">
               YT<span className="text-primary group-hover:translate-x-1 inline-block transition-transform">.</span>
             </a>
-            <p className="text-white/20 text-[10px] font-bold uppercase tracking-widest">
-              © {new Date().getFullYear()} Yash Trivedi. Built with passion.
-            </p>
+            <div className="flex flex-col gap-1">
+              <p className="text-white/20 text-[10px] font-bold uppercase tracking-widest">
+                © {new Date().getFullYear()} Yash Trivedi. Built with passion.
+              </p>
+              <p className="text-white/10 text-[8px] font-bold uppercase tracking-widest">
+                Full-Stack MERN Developer • AI Integrator
+              </p>
+            </div>
           </div>
 
           <div className="flex gap-10">
@@ -50,22 +55,29 @@ export const Footer = () => {
               <Magnetic key={social.name}>
                 <a
                   href={social.url}
-                  className="text-white/40 hover:text-white transition-colors text-[10px] font-black uppercase tracking-widest"
+                  className="text-white/40 hover:text-white transition-colors text-[10px] font-black uppercase tracking-widest relative group"
                 >
                   {social.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary group-hover:w-full transition-all duration-300" />
                 </a>
               </Magnetic>
             ))}
           </div>
 
-          <Magnetic>
-            <button
-              onClick={scrollToTop}
-              className="w-16 h-16 glass rounded-full flex items-center justify-center text-white/40 hover:text-white hover:border-primary transition-all group"
-            >
-              <ChevronUp className="w-6 h-6 group-hover:-translate-y-1 transition-transform" />
-            </button>
-          </Magnetic>
+          <div className="flex items-center gap-6">
+            <div className="text-right hidden md:block">
+              <p className="text-white/20 text-[10px] font-bold uppercase tracking-widest mb-1">Back to Top</p>
+              <p className="text-white/10 text-[8px] font-bold uppercase tracking-widest">Scroll Up</p>
+            </div>
+            <Magnetic>
+              <button
+                onClick={scrollToTop}
+                className="w-16 h-16 glass rounded-full flex items-center justify-center text-white/40 hover:text-white hover:border-primary transition-all group"
+              >
+                <ChevronUp className="w-6 h-6 group-hover:-translate-y-1 transition-transform" />
+              </button>
+            </Magnetic>
+          </div>
         </div>
       </div>
       

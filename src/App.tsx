@@ -10,8 +10,10 @@ import { Skills } from './components/Skills';
 import { Experience } from './components/Experience';
 import { Projects } from './components/Projects';
 import { AISection } from './components/AISection';
+import { Testimonials } from './components/Testimonials';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import { FloatingAI } from './components/FloatingAI';
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -20,8 +22,14 @@ export default function App() {
   useEffect(() => {
     // Initialize Smooth Scroll
     const lenis = new Lenis({
-      duration: 1.2,
+      duration: 1.5,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      touchMultiplier: 2,
+      infinite: false,
     });
 
     function raf(time: number) {
@@ -58,9 +66,11 @@ export default function App() {
             <Experience />
             <Projects />
             <AISection />
+            <Testimonials />
             <Contact />
           </main>
           <Footer />
+          <FloatingAI />
         </>
       )}
     </div>

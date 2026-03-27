@@ -17,10 +17,10 @@ export const portfolioData = {
 
   skills: {
     frontend: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Redux", "Zustand", "Tailwind", "Framer Motion", "GSAP", "Three.js"],
-    backend: ["Node.js", "Express", "GraphQL", "WebRTC", "Socket.io"],
-    database: ["MongoDB", "PostgreSQL", "Redis", "Prisma"],
-    devops: ["Docker", "CI/CD", "AWS", "Nginx"],
-    ai: ["OpenAI", "Gemini", "LangChain", "n8n Automation"]
+    backend: ["Node.js", "Express", "GraphQL", "WebRTC", "Socket.io", "FastAPI"],
+    database: ["MongoDB", "PostgreSQL", "Redis", "Prisma", "Firebase"],
+    devops: ["Docker", "CI/CD", "AWS", "Nginx", "GitHub Actions"],
+    ai: ["OpenAI", "Gemini", "LangChain", "n8n Automation", "Vector DBs"]
   },
 
   experience: [
@@ -65,6 +65,8 @@ export const portfolioData = {
       image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format&fit=crop",
       description: "Advanced secure authentication system with JWT, OAuth, and multi-factor support.",
       tech: ["Node.js", "Express", "MongoDB", "JWT"],
+      details: "A robust authentication system featuring secure password hashing with bcrypt, JWT-based session management, and OAuth2 integration for Google and GitHub. Includes multi-factor authentication (MFA) and account recovery workflows.",
+      features: ["JWT & Refresh Tokens", "OAuth2 Integration", "MFA Support", "Rate Limiting"],
       live: "#",
       github: "#"
     },
@@ -75,6 +77,8 @@ export const portfolioData = {
       image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop",
       description: "A comprehensive platform for developer collaboration and project management.",
       tech: ["React", "Node.js", "Socket.io", "PostgreSQL"],
+      details: "Codivra is a real-time collaboration tool for developers. It features a shared code editor, project kanban boards, and instant messaging. Built with scalability in mind using a microservices architecture.",
+      features: ["Real-time Code Editing", "Kanban Boards", "Team Chat", "File Sharing"],
       live: "#",
       github: "#"
     },
@@ -85,6 +89,8 @@ export const portfolioData = {
       image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=2070&auto=format&fit=crop",
       description: "Modern e-commerce platform with real-time inventory and payment integration.",
       tech: ["Next.js", "Prisma", "Stripe", "Tailwind"],
+      details: "A full-featured e-commerce solution with a focus on user experience and conversion. Includes a powerful admin dashboard for inventory management, Stripe integration for secure payments, and SEO optimization.",
+      features: ["Stripe Integration", "Admin Dashboard", "Inventory Tracking", "SEO Optimized"],
       live: "#",
       github: "#"
     },
@@ -95,6 +101,8 @@ export const portfolioData = {
       image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop",
       description: "Real-time communication app with video calling and instant messaging features.",
       tech: ["WebRTC", "Socket.io", "React", "Express"],
+      details: "A peer-to-peer video calling application using WebRTC for low-latency communication. Features include screen sharing, group calls, and end-to-end encrypted messaging.",
+      features: ["P2P Video Calling", "Screen Sharing", "Group Chat", "E2E Encryption"],
       live: "#",
       github: "#"
     }
@@ -105,5 +113,26 @@ export const portfolioData = {
     { name: "GitHub", url: "#" },
     { name: "LeetCode", url: "#" },
     { name: "Email", url: "mailto:yashtrivedi.contact@gmail.com" }
+  ],
+
+  testimonials: [
+    {
+      name: "Alex Johnson",
+      role: "CEO, TechFlow",
+      content: "Yash is a rare talent who understands both the technical and business aspects of a project. His AI integrations saved us 40 hours of manual work per week.",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop"
+    },
+    {
+      name: "Sarah Chen",
+      role: "Product Manager, CreativeCo",
+      content: "The attention to detail in the UI and the robustness of the backend Yash built was impressive. He's our go-to for complex full-stack applications.",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop"
+    },
+    {
+      name: "Michael Smith",
+      role: "Founder, EduStart",
+      content: "Working with Yash was a breeze. He delivered a high-performance platform on time and exceeded our expectations with his proactive problem-solving.",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop"
+    }
   ]
 };

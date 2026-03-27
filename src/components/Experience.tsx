@@ -69,19 +69,23 @@ export const Experience = () => {
                   </div>
                 </div>
 
-                <p className="text-xl text-white/40 leading-relaxed mb-12 max-w-2xl">
-                  {exp.description}
-                </p>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {exp.achievements.map((achievement, i) => (
-                    <div key={i} className="flex items-start gap-4 p-6 glass rounded-2xl hover:bg-white/[0.02] transition-colors">
-                      <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                      <p className="text-sm text-white/60 leading-relaxed">
-                        {achievement}
-                      </p>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+                  <p className="text-xl text-white/40 leading-relaxed max-w-2xl">
+                    {exp.description}
+                  </p>
+                  <div className="space-y-4">
+                    <h4 className="text-[10px] font-black uppercase tracking-widest text-white/20">Key Achievements</h4>
+                    <div className="grid grid-cols-1 gap-4">
+                      {exp.achievements.map((achievement, i) => (
+                        <div key={i} className="flex items-start gap-4 p-6 glass rounded-2xl hover:bg-white/[0.02] transition-colors group/item">
+                          <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0 group-hover/item:scale-150 transition-transform" />
+                          <p className="text-sm text-white/60 leading-relaxed group-hover/item:text-white transition-colors">
+                            {achievement}
+                          </p>
+                        </div>
+                      ))}
                     </div>
-                  ))}
+                  </div>
                 </div>
                 
                 {/* Divider Line */}

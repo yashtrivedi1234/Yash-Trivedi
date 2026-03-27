@@ -71,7 +71,7 @@ export const Skills = () => {
           <div className="flex gap-8 animate-marquee items-center">
             {allSkills.map((skill, i) => (
               <div key={i} className="flex items-center gap-8">
-                <span className="text-6xl md:text-8xl font-display font-black text-outline hover:text-primary transition-colors cursor-default">
+                <span className="text-6xl md:text-8xl font-display font-black text-primary/30 hover:text-primary transition-colors cursor-default">
                   {skill}
                 </span>
                 <div className="w-4 h-4 rounded-full bg-primary/20" />
@@ -80,7 +80,7 @@ export const Skills = () => {
             {/* Duplicate for seamless loop */}
             {allSkills.map((skill, i) => (
               <div key={`dup-${i}`} className="flex items-center gap-8">
-                <span className="text-6xl md:text-8xl font-display font-black text-outline hover:text-primary transition-colors cursor-default">
+                <span className="text-6xl md:text-8xl font-display font-black text-primary/30 hover:text-primary transition-colors cursor-default">
                   {skill}
                 </span>
                 <div className="w-4 h-4 rounded-full bg-primary/20" />
@@ -94,7 +94,7 @@ export const Skills = () => {
           <div className="flex gap-8 animate-marquee-reverse items-center">
             {allSkills.reverse().map((skill, i) => (
               <div key={`rev-${i}`} className="flex items-center gap-8">
-                <span className="text-6xl md:text-8xl font-display font-black text-white/5 hover:text-secondary transition-colors cursor-default">
+                <span className="text-6xl md:text-8xl font-display font-black text-secondary/30 hover:text-secondary transition-colors cursor-default">
                   {skill}
                 </span>
                 <div className="w-4 h-4 rounded-full bg-secondary/20" />
@@ -103,7 +103,7 @@ export const Skills = () => {
             {/* Duplicate for seamless loop */}
             {allSkills.map((skill, i) => (
               <div key={`rev-dup-${i}`} className="flex items-center gap-8">
-                <span className="text-6xl md:text-8xl font-display font-black text-white/5 hover:text-secondary transition-colors cursor-default">
+                <span className="text-6xl md:text-8xl font-display font-black text-secondary/30 hover:text-secondary transition-colors cursor-default">
                   {skill}
                 </span>
                 <div className="w-4 h-4 rounded-full bg-secondary/20" />

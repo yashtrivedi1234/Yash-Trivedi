@@ -95,7 +95,7 @@ export const Hero = () => {
                 transition={{ duration: 1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
                 className="block text-gradient"
               >
-                DIGITAL
+                INTELLIGENT
               </motion.span>
               <motion.span
                 initial={{ y: 100, opacity: 0 }}
@@ -103,20 +103,21 @@ export const Hero = () => {
                 transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
                 className="block text-outline hover:text-white transition-colors duration-700"
               >
-                POETRY.
+                SYSTEMS.
               </motion.span>
             </h1>
           </div>
           
           <div className="flex flex-col md:flex-row md:items-center gap-16">
-            <motion.p 
+            <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.2 }}
-              className="text-xl text-white/40 max-w-sm leading-relaxed font-medium italic"
+              className="text-xl text-white/40 max-w-sm leading-relaxed font-medium italic relative"
             >
+              <div className="absolute -left-4 top-0 w-1 h-full bg-primary/20 rounded-full" />
               "{portfolioData.tagline}"
-            </motion.p>
+            </motion.div>
             
             <div className="flex flex-wrap gap-8 items-center">
               <Magnetic>
@@ -127,9 +128,9 @@ export const Hero = () => {
                   transition={{ delay: 1.4 }}
                   className="w-32 h-32 rounded-full border border-white/10 flex items-center justify-center group relative overflow-hidden"
                 >
-                  <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
-                  <span className="relative z-10 text-[10px] font-black uppercase tracking-widest group-hover:text-black transition-colors">
-                    Work
+                  <div className="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                  <span className="relative z-10 text-[10px] font-black uppercase tracking-widest group-hover:text-white transition-colors">
+                    View Work
                   </span>
                 </motion.a>
               </Magnetic>
@@ -140,9 +141,10 @@ export const Hero = () => {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 1.5 }}
-                  className="px-10 py-5 glass rounded-full text-[10px] font-black uppercase tracking-[0.3em] hover:bg-primary hover:text-white transition-all"
+                  className="px-10 py-5 glass rounded-full text-[10px] font-black uppercase tracking-[0.3em] hover:bg-primary hover:text-white transition-all relative overflow-hidden group"
                 >
-                  Connect
+                  <div className="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                  <span className="relative z-10">Start Project</span>
                 </motion.a>
               </Magnetic>
             </div>

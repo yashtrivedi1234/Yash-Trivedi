@@ -40,13 +40,14 @@ export const Contact = () => {
 
             <div className="space-y-10">
               <div className="flex items-center gap-8 group">
-                <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
-                  <Mail className="w-6 h-6" />
+                <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-primary/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                  <Mail className="w-6 h-6 relative z-10" />
                 </div>
                 <div>
                   <p className="text-white/20 text-[10px] uppercase tracking-widest font-black mb-2">Email Me</p>
                   <div className="flex items-center gap-4">
-                    <p className="text-2xl font-display font-bold">{portfolioData.email}</p>
+                    <p className="text-2xl font-display font-bold group-hover:text-primary transition-colors">{portfolioData.email}</p>
                     <button 
                       onClick={copyToClipboard}
                       className="p-2 hover:bg-white/5 rounded-xl transition-colors group/copy"
@@ -58,22 +59,24 @@ export const Contact = () => {
               </div>
 
               <div className="flex items-center gap-8 group">
-                <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
-                  <Phone className="w-6 h-6" />
+                <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-primary/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                  <Phone className="w-6 h-6 relative z-10" />
                 </div>
                 <div>
                   <p className="text-white/20 text-[10px] uppercase tracking-widest font-black mb-2">Call Me</p>
-                  <p className="text-2xl font-display font-bold">{portfolioData.phone}</p>
+                  <p className="text-2xl font-display font-bold group-hover:text-primary transition-colors">{portfolioData.phone}</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-8 group">
-                <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
-                  <MapPin className="w-6 h-6" />
+                <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-primary/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                  <MapPin className="w-6 h-6 relative z-10" />
                 </div>
                 <div>
                   <p className="text-white/20 text-[10px] uppercase tracking-widest font-black mb-2">Location</p>
-                  <p className="text-2xl font-display font-bold">{portfolioData.location}</p>
+                  <p className="text-2xl font-display font-bold group-hover:text-primary transition-colors">{portfolioData.location}</p>
                 </div>
               </div>
             </div>

@@ -44,21 +44,25 @@ export const Navbar = () => {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-10">
           {navLinks.map((link) => (
-            <a
+            <motion.a
               key={link.name}
               href={link.href}
-              className="text-[10px] font-black uppercase tracking-[0.2em] text-white/50 hover:text-white transition-colors"
+              whileHover={{ y: -2 }}
+              className="text-[10px] font-black uppercase tracking-[0.2em] text-white/50 hover:text-white transition-colors relative group"
             >
               {link.name}
-            </a>
+              <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary group-hover:w-full transition-all duration-300" />
+            </motion.a>
           ))}
           <div className="w-px h-4 bg-white/10" />
-          <a
+          <motion.a
             href="#contact"
-            className="text-[10px] font-black uppercase tracking-[0.2em] text-primary hover:text-white transition-colors"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="text-[10px] font-black uppercase tracking-[0.2em] px-6 py-2 bg-primary/10 text-primary rounded-full border border-primary/20 hover:bg-primary hover:text-white transition-all"
           >
             Start a Project
-          </a>
+          </motion.a>
         </div>
 
         {/* Mobile Menu Button */}

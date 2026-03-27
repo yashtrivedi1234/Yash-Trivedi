@@ -80,9 +80,22 @@ export const About = () => {
             </h2>
             <div className="max-w-xl space-y-6 text-xl text-white/60 leading-relaxed font-medium">
               <p>{portfolioData.summary}</p>
-              <p className="text-sm text-white/30">
-                I specialize in building production-level applications with a focus on problem-solving and scalability. My expertise spans the entire MERN stack, complemented by advanced AI integration capabilities.
-              </p>
+              <div className="grid grid-cols-2 gap-8 pt-8 border-t border-white/5">
+                <div>
+                  <h4 className="text-[10px] font-black uppercase tracking-widest text-primary mb-4">Core Focus</h4>
+                  <ul className="space-y-2 text-sm text-white/40">
+                    <li>• Scalable Architecture</li>
+                    <li>• AI Integration</li>
+                    <li>• User Experience</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="text-[10px] font-black uppercase tracking-widest text-secondary mb-4">Philosophy</h4>
+                  <p className="text-sm text-white/40 italic">
+                    "Code is poetry, but performance is the rhythm."
+                  </p>
+                </div>
+              </div>
             </div>
           </motion.div>
 

@@ -95,6 +95,46 @@ export const AISection = () => {
           ))}
         </div>
 
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-24">
+          <div className="glass p-12 rounded-[3rem] relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-[100px] group-hover:bg-primary/10 transition-colors" />
+            <span className="text-primary font-display font-bold uppercase tracking-[0.3em] text-[10px] mb-8 block">
+              01 — LLM Integration
+            </span>
+            <h4 className="text-3xl font-display font-bold mb-6 tracking-tighter">Custom RAG Pipelines</h4>
+            <p className="text-white/40 leading-relaxed mb-8">
+              Implementing Retrieval-Augmented Generation (RAG) to provide LLMs with domain-specific knowledge, 
+              ensuring accurate and context-aware responses for enterprise applications.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {["Vector DBs", "Embeddings", "Context Injection"].map((tag, i) => (
+                <span key={i} className="px-4 py-2 bg-white/5 rounded-full text-[10px] font-bold uppercase tracking-widest border border-white/10">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="glass p-12 rounded-[3rem] relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/5 blur-[100px] group-hover:bg-secondary/10 transition-colors" />
+            <span className="text-secondary font-display font-bold uppercase tracking-[0.3em] text-[10px] mb-8 block">
+              02 — Agentic Workflows
+            </span>
+            <h4 className="text-3xl font-display font-bold mb-6 tracking-tighter">Autonomous Automation</h4>
+            <p className="text-white/40 leading-relaxed mb-8">
+              Building systems where AI agents can autonomously use tools, browse the web, and collaborate 
+              to complete complex, multi-step tasks with minimal human intervention.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {["LangChain", "n8n", "Tool Calling"].map((tag, i) => (
+                <span key={i} className="px-4 py-2 bg-white/5 rounded-full text-[10px] font-bold uppercase tracking-widest border border-white/10">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* Technical Visualization Widget */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
