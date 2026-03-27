@@ -18,6 +18,17 @@ export const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Background Image Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={portfolioData.heroImage} 
+          alt="Hero Background" 
+          className="w-full h-full object-cover opacity-10 grayscale"
+          referrerPolicy="no-referrer"
+        />
+        <div className="absolute inset-0 bg-black/60" />
+      </div>
+
       <HeroCanvas />
       
       {/* Top Right Info Widget */}

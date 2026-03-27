@@ -96,7 +96,7 @@ export const About = () => {
           >
             <div className="w-full h-full rounded-[2.5rem] overflow-hidden grayscale hover:grayscale-0 transition-all duration-1000 group">
               <img
-                src="https://picsum.photos/seed/yash/800/1200"
+                src={portfolioData.aboutImage}
                 alt="Yash"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                 referrerPolicy="no-referrer"
