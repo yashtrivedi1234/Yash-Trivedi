@@ -1,6 +1,7 @@
 import { motion, useInView } from 'motion/react';
 import { useRef, useEffect, useState } from 'react';
 import { portfolioData } from '../data/portfolio';
+import { Magnetic } from './Magnetic';
 
 const Counter = ({ value, suffix }: { value: number; suffix: string }) => {
   const [count, setCount] = useState(0);

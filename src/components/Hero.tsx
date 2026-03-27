@@ -1,12 +1,7 @@
-import { motion } from 'motion/react';
-import { HeroCanvas } from './HeroCanvas';
-import { portfolioData } from '../data/portfolio';
-import { ArrowRight, Download } from 'lucide-react';
-
 import { motion, useScroll, useTransform } from 'motion/react';
 import { HeroCanvas } from './HeroCanvas';
 import { portfolioData } from '../data/portfolio';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Download } from 'lucide-react';
 import { Magnetic } from './Magnetic';
 
 export const Hero = () => {
