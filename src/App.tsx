@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Lenis from 'lenis';
-import { AnimatePresence } from 'motion/react';
+import { AnimatePresence, motion, useScroll } from 'motion/react';
 import { CustomCursor } from './components/CustomCursor';
 import { Preloader } from './components/Preloader';
 import { Navbar } from './components/Navbar';
@@ -15,6 +15,7 @@ import { Footer } from './components/Footer';
 
 export default function App() {
   const [loading, setLoading] = useState(true);
+  const { scrollYProgress } = useScroll();
 
   useEffect(() => {
     // Initialize Smooth Scroll
@@ -37,6 +38,10 @@ export default function App() {
 
   return (
     <div className="relative selection:bg-primary/30">
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-1 bg-primary z-[100] origin-left"
+        style={{ scaleX: scrollYProgress }}
+      />
       <div className="fixed inset-0 noise z-[9999] pointer-events-none" />
       <AnimatePresence>
         {loading && <Preloader onComplete={() => setLoading(false)} />}

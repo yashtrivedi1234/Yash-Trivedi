@@ -1,18 +1,54 @@
 import { motion, useScroll, useTransform } from 'motion/react';
+import { useState, useEffect } from 'react';
 import { HeroCanvas } from './HeroCanvas';
 import { portfolioData } from '../data/portfolio';
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowRight, Download, Globe } from 'lucide-react';
 import { Magnetic } from './Magnetic';
 
 export const Hero = () => {
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 500], [0, 200]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
+  const [time, setTime] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => setTime(new Date()), 1000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       <HeroCanvas />
       
+      {/* Top Right Info Widget */}
+      <div className="absolute top-32 right-6 md:right-12 z-20 hidden lg:flex flex-col items-end gap-2">
+        <motion.div 
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 1.5 }}
+          className="flex items-center gap-3 glass px-6 py-3 rounded-full"
+        >
+          <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+          <span className="text-[10px] font-black uppercase tracking-widest">Available for Work</span>
+        </motion.div>
+        <motion.div 
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 1.6 }}
+          className="text-4xl font-display font-light tracking-tighter"
+        >
+          {time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })}
+        </motion.div>
+        <motion.div 
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 1.7 }}
+          className="text-[10px] font-bold uppercase tracking-widest text-white/30"
+        >
+          {portfolioData.location} • GMT+5:30
+        </motion.div>
+      </div>
+
       <div className="container mx-auto px-6 relative z-10">
         <motion.div style={{ y: y1, opacity }} className="max-w-6xl">
           <div className="flex items-center gap-4 mb-12">

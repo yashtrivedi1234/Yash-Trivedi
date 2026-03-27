@@ -14,23 +14,27 @@ const SkillCategory = ({ title, skills, icon: Icon, delay }: { title: string; sk
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
-    transition={{ duration: 0.5, delay }}
-    className="glass p-8 rounded-3xl hover:border-primary/50 transition-colors group"
+    transition={{ duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] }}
+    className="glass p-8 rounded-[2.5rem] hover:bg-white/[0.02] transition-all duration-500 group relative overflow-hidden"
   >
-    <div className="flex items-center gap-4 mb-6">
-      <div className="p-3 bg-primary/10 rounded-2xl text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+    <div className="absolute -right-4 -top-4 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors" />
+    
+    <div className="flex items-center gap-4 mb-8 relative z-10">
+      <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
         <Icon className="w-6 h-6" />
       </div>
-      <h3 className="text-xl font-display font-bold">{title}</h3>
+      <h3 className="text-2xl font-display font-bold">{title}</h3>
     </div>
-    <div className="flex flex-wrap gap-2">
+    
+    <div className="flex flex-wrap gap-3 relative z-10">
       {skills.map((skill, idx) => (
-        <span
+        <motion.span
           key={idx}
-          className="px-3 py-1 bg-white/5 rounded-full text-sm text-white/60 hover:text-white hover:bg-white/10 transition-colors"
+          whileHover={{ scale: 1.05, y: -2 }}
+          className="px-4 py-2 bg-white/5 rounded-xl text-xs font-bold uppercase tracking-widest text-white/40 hover:text-white hover:bg-primary/20 hover:border-primary/30 border border-transparent transition-all cursor-default"
         >
           {skill}
-        </span>
+        </motion.span>
       ))}
     </div>
   </motion.div>
